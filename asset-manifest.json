@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Znakomstva.com/static/css/main.4b945383.css",
+    "main.js": "/Znakomstva.com/static/js/main.5695690e.js",
+    "static/media/photo (2).png": "/Znakomstva.com/static/media/photo (2).58ddc71c7f06a2674325.png",
+    "static/media/hi-emoji.svg": "/Znakomstva.com/static/media/hi-emoji.258b15cb88bfe90775aac401646d6605.svg",
+    "static/media/male.svg": "/Znakomstva.com/static/media/male.32b5543ccccfdc29d380b281f14e3a21.svg",
+    "static/media/logo.svg": "/Znakomstva.com/static/media/logo.7112c69180cb786d8ef3da02724525f9.svg",
+    "static/media/female.svg": "/Znakomstva.com/static/media/female.2f96412327cb8010df5780e4ddedeb15.svg",
+    "static/media/bell.svg": "/Znakomstva.com/static/media/bell.ba6e453bf5f1bb0a97eec0cb4e081a17.svg",
+    "static/media/search.svg": "/Znakomstva.com/static/media/search.3dfb6ed0df6eb096ccda9457d0c11430.svg",
+    "static/media/russia.svg": "/Znakomstva.com/static/media/russia.2191d21f2494f64e6603f422d8014a1b.svg",
+    "index.html": "/Znakomstva.com/index.html",
+    "main.4b945383.css.map": "/Znakomstva.com/static/css/main.4b945383.css.map",
+    "main.5695690e.js.map": "/Znakomstva.com/static/js/main.5695690e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b945383.css",
+    "static/js/main.5695690e.js"
+  ]
+}
