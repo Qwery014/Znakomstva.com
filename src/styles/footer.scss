@@ -1,0 +1,16 @@
+footer {
+  margin-bottom: 3rem;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__menu-list {
+    display: flex;
+    .footer__menu-item {
+      margin-right: 30px;
+      a {
+        cursor: pointer;
+      }
+    }
+  }
+}

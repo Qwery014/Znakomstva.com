@@ -1,0 +1,15 @@
+.home-page {
+  margin-top: 2em;
+}
+.recommendation__header {
+  margin-bottom: 1em;
+  font-size: 1.75em;
+  font-weight: 600;
+}
+.recommendation__block {
+  margin-bottom: 3rem;
+  .recommendation__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
