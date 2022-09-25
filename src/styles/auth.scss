@@ -17,7 +17,7 @@
   margin-right: 20px;
 }
 
-.header__register {
+.header__auth {
   margin-top: 30px;
   .container {
     display: flex;
@@ -39,7 +39,8 @@
   }
 }
 
-.register__form_block {
+.register__form_block,
+.login__form_block {
   input {
     background-color: #42204e;
     border-radius: 500px;
@@ -48,6 +49,12 @@
     &::placeholder {
       color: #8b5d9a;
     }
+  }
+  select {
+    background-color: #42204e;
+    border-radius: 500px;
+    font-size: 1rem;
+    color: #8b5d9a;
   }
 
   .inp-and-icon {
@@ -63,6 +70,8 @@
     .pass_btn-show {
       position: absolute;
       right: 20px;
+      width: 20px;
+      height: 20px;
       button {
         position: relative;
         width: 20px;
@@ -85,9 +94,15 @@
     position: relative;
     display: flex;
     align-items: center;
-    svg {
+    label {
       position: absolute;
       left: 20px;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: text;
     }
     input {
       width: 100%;
@@ -95,7 +110,8 @@
   }
 }
 
-.reg__main {
+.reg__main,
+.login__main {
   .register__header {
     font-size: 2.25rem;
     font-weight: 600;
@@ -106,18 +122,38 @@
     color: #6e447b;
     margin-bottom: 30px;
   }
+  .login__header {
+    // margin-top: ;
+    font-size: 3.8rem;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  .login__sub-header {
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+    width: 70%;
+    line-height: 150%;
+  }
   .auth-input__header {
     font-size: 0.88rem;
     color: #6e447b;
   }
-  .register__form_block {
+  .register__form_block,
+  .login__form_block {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
   }
-  .register__form {
-    padding-bottom: 100px;
+  .register__form,
+  .login__form {
+    padding-bottom: 180px;
     width: 400px;
+    display: flex;
+    flex-direction: column;
     & > div {
       margin-bottom: 20px;
     }
@@ -188,6 +224,19 @@
       box-shadow: 0px 20px 30px rgba(179, 34, 31, 0.1);
       border: 0;
     }
+  }
+  .btn__forget {
+    font-size: 0.9rem;
+    color: #6e447b;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .error__div {
+    text-align: center;
+    color: red;
+    text-shadow: 0px 0px 0px 0px white;
   }
 }
 

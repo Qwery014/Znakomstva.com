@@ -4,8 +4,10 @@ import search from "../assets/icons/search.svg";
 import bell from "../assets/icons/bell.svg";
 import "../styles/header.scss";
 import { useNavigate } from "react-router-dom";
+import { useUsers } from "../context/UsersContextProvider";
 
 const Header = () => {
+  const {} = useUsers();
   
   const navigate = useNavigate();
 

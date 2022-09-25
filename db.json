@@ -1,19 +1,15 @@
 {
-  "posts": [
+  "users": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "email": "dom@gmail.com",
+      "password": "$2a$10$qQecCSo5RaUQiFtyNv/KuOlOBjl8n27ngPDAQhS6eFeTyQs3kOr4m",
+      "username": "Qwery",
+      "day": "14",
+      "month": "july",
+      "year": "2000",
+      "gender": "male",
+      "admin": false,
+      "id": 1
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

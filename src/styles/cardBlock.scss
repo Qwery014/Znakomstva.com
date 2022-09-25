@@ -4,11 +4,11 @@
   height: 350px;
   border-radius: 30px;
   position: relative;
-  transition: 200ms;
+  transition: 100ms;
 }
 
 .user-profile__card:hover {
-  transform: scale(1.01);
+  transform: scale(1.04) !important;
   box-shadow: 0px 0px 18px -2px rgb(0, 0, 0);
 }
 
