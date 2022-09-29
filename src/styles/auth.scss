@@ -31,7 +31,6 @@
       margin-left: 20px;
       cursor: pointer;
       transition: 300ms;
-
       &:hover {
         background-color: var(--pink);
       }
@@ -40,8 +39,10 @@
 }
 
 .register__form_block,
-.login__form_block {
-  input {
+.login__form_block,
+.inputs__block_list {
+  input,
+  textarea {
     background-color: #42204e;
     border-radius: 500px;
     font-size: 1rem;
@@ -111,7 +112,8 @@
 }
 
 .reg__main,
-.login__main {
+.login__main,
+.profile__main_block {
   .register__header {
     font-size: 2.25rem;
     font-weight: 600;

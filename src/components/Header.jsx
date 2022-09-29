@@ -5,20 +5,31 @@ import bell from "../assets/icons/bell.svg";
 import "../styles/header.scss";
 import { useNavigate } from "react-router-dom";
 import { useUsers } from "../context/UsersContextProvider";
+import avatar from "../assets/images/profile-icon.png";
 
 const Header = () => {
-  const {} = useUsers();
-  
+
   const navigate = useNavigate();
+
+  let user = {
+    username: "Username",
+    avatar: ""
+  }
+
+  localStorage.getItem("user") ? (user = JSON.parse(localStorage.getItem("user"))) : (console.log("error"))
+
+  // const user = JSON.parse(localStorage.getItem("user"));
+  // console.log(user)
+
 
   return (
     <header>
       <div className="container">
         <a className="logo" onClick={() => navigate("/")}>
-            <div className="logo__img">
-              <img src={logo} alt="" />
-            </div>
-            <div className="logo__link">Znakomstva.com</div>
+          <div className="logo__img">
+            <img src={logo} alt="" />
+          </div>
+          <div className="logo__link">Znakomstva.com</div>
         </a>
         <nav>
           <ul className="nav__list">
@@ -43,17 +54,25 @@ const Header = () => {
           <button className="header-notifications">
             <img src={bell} alt="" />
           </button>
-          <div className="header-user">
-            <a>
-              <div className="header__user-avatar">
-                <img
-                  src="https://images.squarespace-cdn.com/content/v1/62cd5c01f9646a5e9526e20f/8453b850-db37-4b3c-b228-0131a83dcb5d/signature-style-selfie-stock-model-1x1.png?format=500w"
-                  alt=""
-                />
+          {
+            localStorage.getItem("user") ? (
+              <div className="header-user">
+                <a onClick={() => navigate("/profile")}>
+                  <div className="header__user-avatar">
+                    <img
+                      src={
+                        user.avatar == "" ? (user.avatar) : avatar
+                      }
+                      alt=""
+                    />
+                  </div>
+                  <div className="header__user-username">{user.username}</div>
+                </a>
               </div>
-              <div className="header__user-username">Иван Иванов</div>
-            </a>
-          </div>
+            ) : (
+              <button className="header__auth-btn" onClick={() => navigate("/login")}>Войти</button>
+            )
+          }
         </div>
       </div>
     </header>

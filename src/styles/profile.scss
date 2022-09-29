@@ -1,0 +1,189 @@
+.profile__nav_block {
+  display: flex;
+  flex-direction: column;
+}
+.profile__main_block {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 0;
+
+    input[type="radio"] {
+      display: none;
+    }
+    .profile__nav_block {
+      border-radius: 30px;
+      background-color: #1c0a22;
+      padding: 30px 0;
+      position: relative;
+      min-width: 280px;
+      label {
+        padding-left: 30px;
+        cursor: pointer;
+        svg {
+          margin-right: 20px;
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .label__block-fav {
+        margin: 20px 0;
+      }
+      .border-left__block {
+        width: 3px;
+        height: calc(100% - 60px);
+        position: absolute;
+        display: flex;
+        .border-left__line {
+          background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+          width: 3px;
+          height: 24px;
+          border-radius: 0 5px 5px 0;
+        }
+      }
+      #personal-area:checked ~ .border-left__block {
+        align-items: start;
+      }
+      #personal-area:checked ~ .label__block-pa .profile__vector_path {
+        fill: url(#paint1_linear_52_928);
+      }
+      #favourite:checked ~ .border-left__block {
+        align-items: center;
+      }
+      #favourite:checked ~ .label__block-fav .fav__vector_path {
+        fill: url(#paint1_linear_52_928);
+      }
+      #personal-balance:checked ~ .border-left__block {
+        align-items: end;
+      }
+      #personal-balance:checked ~ .label__block-pb .pb__vector_path {
+        fill: url(#paint1_linear_52_928);
+      }
+      .label__block-pa,
+      .label__block-fav,
+      .label__block-pb {
+        .profile__vector_path,
+        .fav__vector_path,
+        .pb__vector_path {
+          fill: #42204e;
+          transition: 200ms;
+        }
+        &:hover .profile__vector_path,
+        &:hover .fav__vector_path,
+        &:hover .pb__vector_path {
+          fill: url(#paint1_linear_52_928);
+        }
+      }
+    }
+    .profile__profile_blocks {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding-left: 20px;
+      h4 {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      h5 {
+        font-weight: 600;
+        line-height: 1.5;
+        font-size: 18px;
+      }
+      .profile__avatar_block {
+        width: 30%;
+        input {
+          display: none;
+        }
+        img {
+          width: 100%;
+          max-width: 280px;
+          border-radius: 50px;
+          margin-bottom: 20px;
+        }
+        label {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 25px;
+          border: 1px solid #925FA4;
+          border-radius: 30px;
+        }
+      }
+      .profile__select_block {
+        position: relative;
+        display: flex;
+        align-items: center;
+        select {
+          width: 100%;
+          padding: 23px 30px;
+          resize: none;
+          color: rgb(204, 204, 204);
+        }
+        svg {
+          position: absolute;
+          right: 15px;
+          width: 15px;
+          height: 15px;
+        }
+      }
+      .profile__profile_block {
+        display: flex;
+        .inputs__block_list {
+          display: flex;
+          width: 70%;
+          padding-left: 20px;
+          flex-direction: column;
+          .input__block_item {
+            margin-bottom: 40px;
+          }
+          .input__block_item-input {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+          }
+          input,
+          textarea,
+          #reg-date {
+            padding: 23px 30px;
+            resize: none;
+          }
+          textarea {
+            height: 180px;
+            border-radius: 30px;
+          }
+          .inp-descr__textarea {
+            align-self: flex-start;
+            padding-top: 10px;
+          }
+          .profile__inp,
+          .reg-date__input_blocks,
+          .reg-sex__block,
+          .profile__select_block select {
+            width: 380px;
+          }
+          button {
+            background: linear-gradient(90deg, #ffae00 0%, #ff005c 45%, #ee0979 55%, #ff6a00 100%);
+            background-size: 200%;
+            background-position: right;
+            border-radius: 40px;
+            padding: 23px 0;
+            width: 300px;
+            font-size: 0.9em;
+            font-weight: 200;
+            justify-content: center;
+            cursor: pointer;
+            user-select: none;
+            transition: 1s;
+            &:hover {
+              background-position: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}

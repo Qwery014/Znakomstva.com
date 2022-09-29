@@ -89,7 +89,7 @@ const Login = () => {
                     />
                   </svg>
                 </label>
-                <input type="email" placeholder="Введите электронную почту" id='inp__mail' onChange={(e) => setEmail(e.target.value)} />
+                <input type="email" placeholder="Введите электронную почту" id='inp__mail' onChange={(e) => setEmail(e.target.value)} required />
               </div>
               <div className="reg__input_block inp-and-icon-around">
                 <label htmlFor="inp__pass">
@@ -106,7 +106,7 @@ const Login = () => {
                     />
                   </svg>
                 </label>
-                <input type={passShow} placeholder="Введите пароль" id='inp__pass' onChange={(e) => setPassword(e.target.value)} />
+                <input type={passShow} placeholder="Введите пароль" id='inp__pass' onChange={(e) => setPassword(e.target.value)} required minlength="6" />
                 <div className="pass_btn-show">
                   <button onClick={() => ((passShow === "password") ? passShowFunc() : passCloseFunc())}>
                     <svg
@@ -139,7 +139,6 @@ const Login = () => {
                 Неверные данные
               </div>
               <button type="submit" className="btn__create-acoount" onClick={() => handleLogin(email, password)}>Войти в аккаунт</button>
-              <p className='btn__forget'>Я не помню пароль</p>
             </form>
           </div>
         </div>

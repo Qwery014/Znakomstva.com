@@ -28,7 +28,15 @@ const Register = () => {
   const [gender, setGender] = useState("");
 
 
-  function handleRegister(username, email, password, day, month, year, gender) {
+  function handleRegister(
+    username,
+    email,
+    password,
+    day,
+    month,
+    year,
+    gender
+  ) {
     if (username.trim() && email.trim() && password.trim() && day.trim() && month.trim() && year.trim() && gender.trim()) {
       register(username, email, password, day, month, year, gender);
     } else {
@@ -103,13 +111,14 @@ const Register = () => {
                   className="reg-username reg__inp"
                   placeholder="Ваше имя"
                   onChange={(e) => setUsername(e.target.value)}
+                  required
                 />
               </div>
               <div className="reg-date">
                 <h5 className="auth-input__header">Дата рождения</h5>
                 <div className="reg-date__input_blocks">
                   <div className="reg-around">
-                    <input type="text" className="reg__inp reg__inp_date" placeholder="День" onChange={(e) => setDay(e.target.value)} />
+                    <input type="text" className="reg__inp reg__inp_date" placeholder="День" onChange={(e) => setDay(e.target.value)} required />
                   </div>
                   <div className="reg-between">
                     <select
@@ -139,7 +148,7 @@ const Register = () => {
                     </svg>
                   </div>
                   <div className="reg-around">
-                    <input type="text" className="reg__inp reg__inp_date" placeholder="Год" onChange={(e) => setYear(e.target.value)} />
+                    <input type="text" className="reg__inp reg__inp_date" placeholder="Год" onChange={(e) => setYear(e.target.value)} required />
                   </div>
                 </div>
               </div>
@@ -168,7 +177,7 @@ const Register = () => {
                     />
                   </svg>
                 </label>
-                <input type="email" placeholder="Введите электронную почту" id="inp__mail" onChange={(e) => setEmail(e.target.value)} />
+                <input type="email" placeholder="Введите электронную почту" id="inp__mail" onChange={(e) => setEmail(e.target.value)} required />
               </div>
               <div className="reg__input_block inp-and-icon-around">
                 <label htmlFor="inp__pass">
@@ -185,7 +194,7 @@ const Register = () => {
                     />
                   </svg>
                 </label>
-                <input type={passShow} placeholder="Введите пароль" id="inp__pass" onChange={(e) => setpassword(e.target.value)} />
+                <input type={passShow} placeholder="Введите пароль" id="inp__pass" onChange={(e) => setpassword(e.target.value)} required minLength="8" />
                 <div className="pass_btn-show">
                   <button onClick={() => ((passShow === "password") ? passShowFunc() : passCloseFunc())}>
                     <svg
@@ -214,7 +223,7 @@ const Register = () => {
                   </button>
                 </div>
               </div>
-              <div className="error__div" style={{display: errorDisplay}}>
+              <div className="error__div" style={{ display: errorDisplay }}>
                 Неверные данные
               </div>
               <button type="submit" className="btn__create-acoount" onClick={() => handleRegister(username, email, password, day, month, year, gender)}>Создать аккаунт</button>

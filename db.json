@@ -1,15 +1,40 @@
 {
   "users": [
     {
-      "email": "dom@gmail.com",
-      "password": "$2a$10$qQecCSo5RaUQiFtyNv/KuOlOBjl8n27ngPDAQhS6eFeTyQs3kOr4m",
+      "email": "shamievmalik@gmail.com",
+      "password": "$2a$10$IbLgERsIhfwOqscQyI0Ueuk5O.oasSuUrq6ZrNfecWnxRUS3Ru.FC",
       "username": "Qwery",
       "day": "14",
       "month": "july",
       "year": "2000",
       "gender": "male",
+      "avatar": "",
+      "height": "",
+      "weight": "",
+      "hairColor": "",
+      "eyeColor": "",
+      "PurposeOfDating": "",
+      "about": "",
       "admin": false,
       "id": 1
+    },
+    {
+      "email": "fd@g",
+      "password": "$2a$10$iCaQ.Ptx3bDFF5wPvCSW5eQjxk9pSdu5ks7vbjNFeFD0aaMNLdcha",
+      "username": "name",
+      "day": "21",
+      "month": "may",
+      "year": "1978",
+      "gender": "female",
+      "avatar": "",
+      "height": "160-170см",
+      "weight": "50-60кг",
+      "hairColor": "Шатен",
+      "eyeColor": "Карий",
+      "PurposeOfDating": "цель",
+      "about": "о себе",
+      "admin": false,
+      "id": 2
     }
   ]
 }

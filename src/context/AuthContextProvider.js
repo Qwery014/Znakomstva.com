@@ -29,6 +29,13 @@ const AuthContextProvider = ({ children }) => {
       "month": month,
       "year": year,
       "gender": gender,
+      "avatar": "",
+      "height": "",
+      "weight": "",
+      "hairColor": "",
+      "eyeColor": "",
+      "PurposeOfDating": "",
+      "about": "",
       "admin": false,
     }
 
@@ -57,11 +64,19 @@ const AuthContextProvider = ({ children }) => {
     }
   }
 
+  const profileSaveChanges = async (user) => {
+    await axios.patch(`${API}/users/${user.id}`, user);
+    localStorage.setItem("user", JSON.stringify(user));
+    window.location.reload();
+  }
+
+
   return (
     <authContext.Provider
       value={{
         register,
-        login
+        login,
+        profileSaveChanges,
       }}
     >
       {children}
