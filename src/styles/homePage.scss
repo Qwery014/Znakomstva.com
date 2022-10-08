@@ -9,7 +9,9 @@
 .recommendation__block {
   margin-bottom: 3rem;
   .recommendation__list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 18.5%);
+    // grid-gap: 25px 20px;
     justify-content: space-between;
   }
 }

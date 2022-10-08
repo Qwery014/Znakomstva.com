@@ -5,7 +5,9 @@ import bell from "../assets/icons/bell.svg";
 import "../styles/header.scss";
 import { useNavigate } from "react-router-dom";
 import { useUsers } from "../context/UsersContextProvider";
-import avatar from "../assets/images/profile-icon.png";
+import Avatar from "../assets/images/profile-icon.png";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const Header = () => {
 
@@ -18,8 +20,9 @@ const Header = () => {
 
   localStorage.getItem("user") ? (user = JSON.parse(localStorage.getItem("user"))) : (console.log("error"))
 
-  // const user = JSON.parse(localStorage.getItem("user"));
-  // console.log(user)
+
+
+
 
 
   return (
@@ -61,7 +64,7 @@ const Header = () => {
                   <div className="header__user-avatar">
                     <img
                       src={
-                        user.avatar == "" ? (user.avatar) : avatar
+                        user.avatar == "" ? (user.avatar) : Avatar
                       }
                       alt=""
                     />

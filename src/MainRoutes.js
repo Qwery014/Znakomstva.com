@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
+import ProfilePage from "./pages/ProfilePage";
 import Register from "./pages/Register";
 
 
@@ -27,6 +28,11 @@ const MainRoutes = () => {
       link: "/profile",
       element: <Profile />,
       id: 4,
+    },
+    {
+      link: "/profileview/:id",
+      element: <ProfilePage />,
+      id: 5,
     }
   ];
   return (

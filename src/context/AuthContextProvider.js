@@ -29,7 +29,7 @@ const AuthContextProvider = ({ children }) => {
       "month": month,
       "year": year,
       "gender": gender,
-      "avatar": "",
+      "avatar": "https://w7.pngwing.com/pngs/845/519/png-transparent-computer-icons-avatar-avatar-heroes-logo-fictional-character.png",
       "height": "",
       "weight": "",
       "hairColor": "",

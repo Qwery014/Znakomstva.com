@@ -1,25 +1,31 @@
 import React from "react";
 import hi from "../assets/icons/hi-emoji.svg";
 import "../styles/cardBlock.scss";
-import country from "../assets/icons/russia.svg";
+import { useNavigate } from "react-router-dom";
 
-const PeopleCard = () => {
+const PeopleCard = ({ item }) => {
+
+  const navigate = useNavigate();
+
+
+
+
+
   return (
-    <div
+    <a
       className="user-profile__card"
       data-aos="fade-zoom"
       data-aos-easing="ease"
       data-aos-offset="0"
       data-aos-duration="1100"
       data-aos-once="true"
+      onClick={() => navigate(`/profileview/${item.id}`)}
+      style={{ background: `padding-box url(${item.avatar}) no-repeat center/cover` }}
+      key={item.id}
     >
       <div className="user-card__user-info">
         <div className="user-card__name">
-          Виктор <span className="user-card__age">22</span>
-        </div>
-        <div className="user-card__country-block">
-          <img src={country} alt="" />
-          <p>Россия</p>
+          {item.username} <span className="user-card__age">{" "}</span>
         </div>
         <button>
           Поприветствовать{" "}
@@ -28,7 +34,7 @@ const PeopleCard = () => {
           </span>
         </button>
       </div>
-    </div>
+    </a>
   );
 };
 
